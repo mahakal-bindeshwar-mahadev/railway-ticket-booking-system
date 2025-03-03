@@ -48,9 +48,11 @@ public class RailwayTicketBooking {
 		BookTicket p2 = new BookTicket(ujjainStation, "kaalnath", 20);
 		BookTicket p3 = new BookTicket(indoreStation, "haru",10);
 		BookTicket p4 = new BookTicket(indoreStation, "hari", 15);
+		BookTicket p5 = new BookTicket(ujjainStation, "har", 5);
 		p1.start();
 		p2.start();
 		p3.start();
 		p4.start();
+		p5.start();
 	}
 }
