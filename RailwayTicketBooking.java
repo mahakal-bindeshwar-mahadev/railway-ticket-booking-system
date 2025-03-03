@@ -1,4 +1,3 @@
-
 class Railway{
 	
 	static int totalSeats = 100;
