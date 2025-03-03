@@ -1,7 +1,7 @@
 
 class Railway{
 	
-	static int totalSeats = 50;
+	static int totalSeats = 100;
 	
 	synchronized static void bookSeats(String name, int seats) {
 		
@@ -47,8 +47,8 @@ public class RailwayTicketBooking {
 		BookTicket p1 = new BookTicket(delhiStation, "kashilal", 25);
 		BookTicket p2 = new BookTicket(ujjainStation, "kaalnath", 20);
 		BookTicket p3 = new BookTicket(indoreStation, "haru",10);
-		BookTicket p4 = new BookTicket(indoreStation, "hari", 15);
-		BookTicket p5 = new BookTicket(ujjainStation, "har", 5);
+		BookTicket p4 = new BookTicket(indoreStation, "hari", 25);
+		BookTicket p5 = new BookTicket(ujjainStation, "har", 30);
 		p1.start();
 		p2.start();
 		p3.start();
