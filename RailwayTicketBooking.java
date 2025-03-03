@@ -1,6 +1,6 @@
 class Railway{
 	
-	static int totalSeats = 100;
+	static int totalSeats = 110;
 	String stationName;
 
 	Railway(String stationName){
@@ -49,7 +49,7 @@ public class RailwayTicketBooking {
 		
 		BookTicket p1 = new BookTicket(delhiStation, "kashilal", 25);
 		BookTicket p2 = new BookTicket(ujjainStation, "kaalnath", 20);
-		BookTicket p3 = new BookTicket(indoreStation, "haru",10);
+		BookTicket p3 = new BookTicket(indoreStation, "haru",15);
 		BookTicket p4 = new BookTicket(indoreStation, "hari", 25);
 		BookTicket p5 = new BookTicket(ujjainStation, "har", 30);
 		p1.start();
