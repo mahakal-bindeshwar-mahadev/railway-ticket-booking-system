@@ -1,18 +1,22 @@
 class Railway{
 	
 	static int totalSeats = 100;
-	
-	synchronized static void bookSeats(String name, int seats) {
+	String stationName;
+
+	Railway(String stationName){
+		this.stationName = stationName;
+	}
+	synchronized static void bookSeats(String name, String stationName, int seats) {
 		
 		if (totalSeats >= seats) {
 			
-			System.out.println(name +" your "+ seats + " seats sucessfully booked");
+			System.out.println(name +" your "+ seats + " seats sucessfully booked at " +stationName);
 			totalSeats -= seats;
 			System.out.println("Rmaining seats is: " + totalSeats);
 			
 		}
 		else {
-			System.out.println(name +" you can't book " + seats+ " seats. Because remaining seates is: "+ totalSeats);
+			System.out.println(name +" you can't book " + seats+ " seats at " + stationName + ". Because remaining seates is: "+ totalSeats);
 		}
 	}
 }
@@ -29,7 +33,7 @@ class BookTicket extends Thread{
 	}
 	
 	public void run() {
-		railway.bookSeats(name, seats);
+		railway.bookSeats(name, railway.stationName, seats);
 	}
 	
 }
@@ -39,9 +43,9 @@ public class RailwayTicketBooking {
 	
 	public static void main(String[] args) {
 		
-		Railway delhiStation = new Railway();
-		Railway ujjainStation = new Railway();
-		Railway indoreStation = new Railway();
+		Railway delhiStation = new Railway("Delhi Junction");
+		Railway ujjainStation = new Railway("Ujjain Junction");
+		Railway indoreStation = new Railway("Indore Junction");
 		
 		BookTicket p1 = new BookTicket(delhiStation, "kashilal", 25);
 		BookTicket p2 = new BookTicket(ujjainStation, "kaalnath", 20);
